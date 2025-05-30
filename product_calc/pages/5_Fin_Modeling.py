@@ -36,9 +36,18 @@ data["Revenue"] = data["Пользователи"] * data["ARPU_adj"]
 data["Total_LTV"] = data["Пользователи"] * data["LTV"]
 
 st.subheader("Финансовый прогноз")
-st.dataframe(data[["Сегмент", "Пользователи", "ARPU_adj", "Retention_adj", "LTV", "Revenue", "Total_LTV"]]
-             .rename(columns={"ARPU_adj": "ARPU", "Retention_adj": "Retention"})
-             .style.format("{:.2f}"))
+display_df = data[["Сегмент", "Пользователи", "ARPU_adj", "Retention_adj", "LTV", "Revenue", "Total_LTV"]] \\
+    .rename(columns={"ARPU_adj": "ARPU", "Retention_adj": "Retention"})
+
+st.dataframe(display_df.style.format({
+    "Пользователи": "{:,.0f}",
+    "ARPU": "{:.2f}",
+    "Retention": "{:.2f}",
+    "LTV": "{:.2f}",
+    "Revenue": "{:.2f}",
+    "Total_LTV": "{:.2f}"
+}))
+
 
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.bar(data["Сегмент"], data["Revenue"], label="Revenue")
