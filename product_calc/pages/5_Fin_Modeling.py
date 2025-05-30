@@ -14,7 +14,7 @@ st.markdown("""
 """)
 
 st.subheader("Ввод данных по сегментам")
-data = st.experimental_data_editor(
+data = st.data_editor(
     pd.DataFrame({
         "Сегмент": ["Free", "Premium", "Enterprise"],
         "Пользователи": [10000, 1500, 100],
