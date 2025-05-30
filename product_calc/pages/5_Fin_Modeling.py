@@ -68,4 +68,12 @@ scenarios["LTV"] = scenarios["ARPU"] * scenarios["Retention"] * scenarios["Margi
 scenarios["Revenue"] = data["Пользователи"].sum() * scenarios["ARPU"]
 scenarios["Total_LTV"] = data["Пользователи"].sum() * scenarios["LTV"]
 
-st.dataframe(scenarios.style.format("{:.2f}"))
+st.dataframe(scenarios.style.format({
+    "ARPU": "{:.2f}",
+    "Retention": "{:.2f}",
+    "Margin": "{:.2f}",
+    "LTV": "{:.2f}",
+    "Revenue": "{:,.0f}",
+    "Total_LTV": "{:,.0f}"
+}))
+
