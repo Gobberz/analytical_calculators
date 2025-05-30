@@ -4,5 +4,5 @@ numpy
 scipy
 matplotlib
 seaborn
-yaml
+PyYAML
 openpyxl
