@@ -16,7 +16,7 @@ uploaded_file = st.file_uploader("Загрузите CSV (необязатель
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
 else:
-    st.subheader("✍Ввод вручную")
+    st.subheader("Ввод вручную")
     with st.form("manual_input"):
         segment = st.text_input("Segment", "Default")
         ARPU = st.number_input("ARPU ($)", 0.0, 1000.0, 50.0)
