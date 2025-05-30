@@ -36,7 +36,7 @@ data["Revenue"] = data["Пользователи"] * data["ARPU_adj"]
 data["Total_LTV"] = data["Пользователи"] * data["LTV"]
 
 st.subheader("Финансовый прогноз")
-display_df = data[["Сегмент", "Пользователи", "ARPU_adj", "Retention_adj", "LTV", "Revenue", "Total_LTV"]] 
+display_df = data[["Сегмент", "Пользователи", "ARPU_adj", "Retention_adj", "LTV", "Revenue", "Total_LTV"]] \
     .rename(columns={"ARPU_adj": "ARPU", "Retention_adj": "Retention"})
 
 st.dataframe(display_df.style.format({
