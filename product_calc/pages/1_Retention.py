@@ -6,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Retention Analysis", layout="wide")
-st.title("\U0001F4C8 Retention Analysis")
+st.title("Retention Analysis")
 
 st.markdown("Загрузите файл с колонками: `user_id`, `install_date`, `event_date`")
 
