@@ -32,7 +32,7 @@ if load_exp:
     st.success("Конфигурация успешно загружена")
 else:
     st.markdown("Добавьте 2+ групп (название, кол-во пользователей, число конверсий)")
-    groups = st.experimental_data_editor(
+    groups = st.data_editor(
         pd.DataFrame({"Группа": ["A", "B"], "Пользователи": [1000, 1000], "Конверсии": [120, 150]}),
         num_rows="dynamic"
     )
