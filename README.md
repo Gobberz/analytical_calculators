@@ -1,2 +1,2 @@
-# Other-projects
+# Calculator to analysts
 -
